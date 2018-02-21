@@ -1,10 +1,15 @@
-.page {
-  font-family: Roboto;
-}
-
 .about {
   font-size: 30px;
   color: #000000;
+}
+
+.page {
+  height: 62%;
+  min-height: 655px;
+}
+
+.logo {
+  margin-top: 5%;
 }
 
 .discount {
@@ -15,10 +20,12 @@
 
 .article {
   background-color: #e8e9de;
+  height: 35%;
+  min-height: 400px;
 }
 
 .main_info {
-  padding: 55px 0;
+  padding-top: 6%;
 }
 
 .email-input {
@@ -29,6 +36,9 @@
   color: #aeaeae;
   padding-left: 15px;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  border: none;
 }
 
 .email-input:focus {
@@ -46,6 +56,7 @@
   border-color: #8a4c79;
   color: #ffffff;
   margin: 20px 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .ul_header {
@@ -54,7 +65,10 @@
 }
 
 .footer {
-  text-align: right;
+  margin-right: 0;
+  height: 4%;
+  min-height: 25px;
+  text-align: center;
   background-color: #888787;
 }
 
@@ -62,8 +76,6 @@
   margin: 0 auto;
 }
 
-.logo {
-}
 
 ul {
   list-style-type: none;
@@ -91,12 +103,76 @@ img {
   height: auto;
 }
 
-/*@media (max-width: 400px) {*/
-/*.about {*/
-/*font-size: 10px;*/
-/*}*/
-/*}*/
-
-@media only screen and (min-width: 600px) {
-  body { background-color: red; }
+.images {
+  margin-right: 25px;
 }
+
+.phone_image {
+  margin-top: 5px;
+  height: 27px;
+  width: 27px;
+  margin-right: 27px;
+  float: left;
+}
+
+.whatsap {
+  color: #32d02d;
+}
+
+.viber {
+  color: #9b5ab6;
+}
+
+.email {
+  color: #5c6b96;
+}
+
+/* xs (<=543px) */
+@media (max-width: 575px) {
+  .header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about {
+    margin: 0 auto;
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 1.3rem;
+  }
+  .page {
+    min-height: 400px;
+    height: 400px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .discount {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.5rem;
+  }
+  .price-form {
+    margin-top: 15px;
+  }
+  .email-input {
+    width: 175px;
+    height: 35px;
+    font-size: 10px;
+    padding-left: 4px;
+  }
+  .btn {
+    width: 145px;
+    height: 35px;
+    font-size: 12px;
+  }
+  .article {
+    min-height: 500px;
+  }
+
+  .logo {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+}
+
+
