@@ -1,3 +1,102 @@
-.page{
+.page {
+  font-family: Roboto;
+}
 
+.about {
+  font-size: 30px;
+  color: #000000;
+}
+
+.discount {
+  font-size: 42px;
+  color: #8a4c79;
+  line-height: 3rem;
+}
+
+.article {
+  background-color: #e8e9de;
+}
+
+.main_info {
+  padding: 55px 0;
+}
+
+.email-input {
+  background-color: #e8e8e8;
+  border-radius: 25px;
+  width: 355px;
+  height: 48px;
+  color: #aeaeae;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.email-input:focus {
+  outline: none;
+}
+
+.price-form {
+  margin-top: 55px;
+}
+
+.btn {
+  width: 295px;
+  height: 62px;
+  background-color: #8a4c79;
+  border-color: #8a4c79;
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+.ul_header {
+  font-size: 25px;
+  color: #949db3;
+}
+
+.footer {
+  text-align: right;
+  background-color: #888787;
+}
+
+.content-center {
+  margin: 0 auto;
+}
+
+.logo {
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.ul_header {
+  font-size: 25px;
+  color: #6f7ca0;
+}
+
+hr {
+  margin: 0;
+  border-top: 2px solid #8a4c79;
+}
+
+ul li {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 1.3rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*@media (max-width: 400px) {*/
+/*.about {*/
+/*font-size: 10px;*/
+/*}*/
+/*}*/
+
+@media only screen and (min-width: 600px) {
+  body { background-color: red; }
 }
