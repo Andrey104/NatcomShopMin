@@ -87,7 +87,6 @@
   margin: 0 auto;
 }
 
-
 ul {
   list-style-type: none;
   padding-left: 0;
@@ -186,14 +185,8 @@ img {
 
 }
 
-@media screen and (max-width: 576px) { .about {
-  background-color: #32d02d;
-} }
-
 /* sm (>=576 и <=767) */
-@media screen and (min-width: 576px) and (max-width: 767px) { .about {
-  background-color: red;
-}
+@media screen and (min-width: 576px) and (max-width: 767px) {
   .page {
     min-height: 700px;
   }
@@ -203,9 +196,7 @@ img {
 }
 
 /* md (>=768 и <=991) */
-@media screen and (min-width: 768px) and (max-width: 991px) { .about {
-  background-color: yellow;
-}
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .page {
     min-height: 700px;
   }
@@ -218,9 +209,7 @@ img {
 }
 
 /*!* lg (>=992 и <=1199) *!*/
-@media screen and (min-width: 992px) and (max-width: 1199px) {.about {
-  background-color: green;
-  }
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   .page {
     min-height: 550px;
   }
@@ -230,9 +219,7 @@ img {
 
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1400px) {.about {
-  background-color: darkred;
-}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
   .btn {
     margin: 12px 0;
   }
@@ -250,9 +237,7 @@ img {
   }
 }
 
-@media screen and (min-width: 1900px) {.about {
-  background-color: darkred;
-}
+@media screen and (min-width: 1900px) {
   .header {
     padding-top: 5%;
   }
