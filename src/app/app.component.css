@@ -4,28 +4,24 @@
 }
 
 .page {
-  height: 62%;
-  min-height: 655px;
-}
-
-.logo {
-  margin-top: 5%;
+  height: 66%;
+  min-height: 550px;
 }
 
 .discount {
-  font-size: 42px;
+  font-size: 36px;
   color: #8a4c79;
   line-height: 3rem;
 }
 
 .article {
   background-color: #e8e9de;
-  height: 35%;
-  min-height: 400px;
+  height: 32%;
+  min-height: 320px;
 }
 
 .main_info {
-  padding-top: 6%;
+  padding-top: 3%;
 }
 
 .email-input {
@@ -33,20 +29,35 @@
   border-radius: 25px;
   width: 355px;
   height: 48px;
-  color: #aeaeae;
+  color: #000000;
   padding-left: 15px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   border: none;
 }
 
 .email-input:focus {
   outline: none;
 }
+.email-input:focus::-webkit-input-placeholder {
+  color: transparent
+}
+
+.email-input:focus::-moz-placeholder {
+  color: transparent
+}
+
+.email-input:focus:-moz-placeholder {
+  color: transparent
+}
+
+.email-input:focus:-ms-input-placeholder {
+  color: transparent
+}
 
 .price-form {
-  margin-top: 55px;
+  margin-top: 30px;
 }
 
 .btn {
@@ -66,7 +77,7 @@
 
 .footer {
   margin-right: 0;
-  height: 4%;
+  height: 1%;
   min-height: 25px;
   text-align: center;
   background-color: #888787;
@@ -140,8 +151,8 @@ img {
     line-height: 1.3rem;
   }
   .page {
-    min-height: 400px;
-    height: 400px;
+    min-height: 380px;
+    height: 380px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -156,7 +167,7 @@ img {
   .email-input {
     width: 175px;
     height: 35px;
-    font-size: 10px;
+    font-size: 13px;
     padding-left: 4px;
   }
   .btn {
@@ -174,5 +185,93 @@ img {
   }
 
 }
+
+@media screen and (max-width: 576px) { .about {
+  background-color: #32d02d;
+} }
+
+/* sm (>=576 и <=767) */
+@media screen and (min-width: 576px) and (max-width: 767px) { .about {
+  background-color: red;
+}
+  .page {
+    min-height: 700px;
+  }
+  .article {
+    min-height: 430px;
+  }
+}
+
+/* md (>=768 и <=991) */
+@media screen and (min-width: 768px) and (max-width: 991px) { .about {
+  background-color: yellow;
+}
+  .page {
+    min-height: 700px;
+  }
+  .article {
+    min-height: 420px;
+  }
+  .address {
+    margin-left: 10%;
+  }
+}
+
+/*!* lg (>=992 и <=1199) *!*/
+@media screen and (min-width: 992px) and (max-width: 1199px) {.about {
+  background-color: green;
+  }
+  .page {
+    min-height: 550px;
+  }
+  .article {
+    min-height: 420px;
+  }
+
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {.about {
+  background-color: darkred;
+}
+  .btn {
+    margin: 12px 0;
+  }
+  .price-form {
+    margin-top: 20px;
+  }
+  .page {
+    min-height: 528px;
+  }
+  .article {
+    min-height: 300px;
+  }
+  .main_info {
+    padding-top: 2%;
+  }
+}
+
+@media screen and (min-width: 1900px) {.about {
+  background-color: darkred;
+}
+  .header {
+    padding-top: 5%;
+  }
+  .email-input {
+    margin-top: 50px;
+  }
+  .main_info {
+    padding-top: 3%;
+  }
+}
+@media screen and (width: 1440px) {
+  .page {
+    height: 555px;
+  }
+}
+
+
+
+
+
 
 
