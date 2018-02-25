@@ -40,6 +40,7 @@ export class AppComponent {
       .subscribe(
         data => {
           alert('Прайс успешно отправлен!')
+          this.emailForm.reset()
         },
         err => {
           alert('Неудалось отправить прайс. Попробуйте позже.')
