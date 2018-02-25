@@ -11,8 +11,13 @@
       <div class="discount_text>">MSD Premium на отрез от 45 руб/м2, в гарпуне от 69руб/м2</div>
     </div>
     <div class="price-form text-center">
-      <div><input class="email-input" type="email" placeholder="Введите адрес электронной почты"></div>
-      <div><button type="button" class="btn btn-lg">Получить прайс</button></div>
+      <form [formGroup]="emailForm">
+        <div><input class="email-input" type="email" placeholder="Введите адрес электронной почты" name="email" id="email" formControlName="email"></div>
+        <div *ngIf="emailError">
+          Введите правильный email !
+        </div>
+        <div><button type="button" class="btn btn-lg" (click)="ok()">Получить прайс</button></div>
+      </form>
     </div>
   </div>
 </div>
