@@ -36,7 +36,7 @@ export class AppComponent {
 
   sendPriceRequest(email) {
     this.http
-      .post('http://92.53.120.99/api/price/',{ "email": email})
+      .post('http://vse-polotna.ru/api/price/',{"email":email})
       .subscribe(
         data => {
           alert('Прайс успешно отправлен!')
