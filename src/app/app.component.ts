@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
-import {HttpClient} from "@angular/common/http";
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +8,10 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
   email;
   emailError = false;
 
-  constructor (private http: HttpClient){
+  constructor (private http: HttpClient) {
 
   }
 
@@ -36,14 +35,14 @@ export class AppComponent {
 
   sendPriceRequest(email) {
     this.http
-      .post('http://vse-polotna.ru/api/price/',{"email":email})
+      .post('http://vse-polotna.ru/api/price/', {'email': email})
       .subscribe(
         data => {
-          alert('Прайс успешно отправлен!')
-          this.emailForm.reset()
+          alert('Прайс успешно отправлен!');
+          this.emailForm.reset();
         },
         err => {
-          alert('Неудалось отправить прайс. Попробуйте позже.')
+          alert('Неудалось отправить прайс. Попробуйте позже.');
         }
       );
   }

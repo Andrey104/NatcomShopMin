@@ -1,62 +1,7 @@
-<div class="page container">
-  <div class="header container">
-    <div class="row logo">
-      <div class="content-center"><img class="img-logo" src="assets/images/logo.jpg"/></div>
-    </div>
-    <div class="about row">
-      <div class="content-center text-center">Самый большой выбор полотен для натяжных потолков в Москве!</div>
-    </div>
-    <div class="discount text-center">
-      <div class="discount_header">Акция!!!</div>
-      <div class="discount_text>">MSD Premium на отрез от 45 руб/м2, в гарпуне от 69руб/м2</div>
-    </div>
-    <div class="price-form text-center">
-      <form [formGroup]="emailForm">
-        <div><input class="email-input" type="email" placeholder="Введите адрес электронной почты" name="email" id="email" formControlName="email"></div>
-        <div *ngIf="emailError">
-          Введите правильный email !
-        </div>
-        <div><button type="button" class="btn btn-lg" (click)="ok()">Получить прайс</button></div>
-      </form>
-    </div>
+<form [formGroup]="emailForm">
+  <div><input class="email-input" type="email" placeholder="Введите адрес электронной почты" name="email" id="email" formControlName="email"></div>
+  <div *ngIf="emailError">
+    Введите правильный email !
   </div>
-</div>
-<div class="article">
-  <div class="container">
-    <div class="main_info row">
-      <div class="address col-md-4 col-lg-3 offset-md-2 col-xs-12">
-        <div class="ul_header">Адреса:</div>
-        <hr class="col-xm-10">
-        <ul class="address_body col-md-11">
-          <li>Точка выдачи: Москва, ул. Калибровская, д. 31, стр. 4</li>
-          <li>Производство: МО, г. Ивантеевка, ул. Огорхоз, д. 1 </li>
-          <li>Осуществляем доставку комплектующих до адреса</li>
-        </ul>
-      </div>
-      <div class="contact col-md-4 col-lg-3 offset-md-2 col-xs-12">
-        <div class="ul_header">Контактные данные:</div>
-        <hr>
-        <ul class="contact_body">
-          <li class="phone">
-            <div class="contact_text"><img class="phone_image" src="assets/images/phone.png"><div>8(800)777-3288<br>(звонок бесплатный)</div></div>
-          </li>
-          <li class="whatsap">
-            <div class="contact_text"><img class="images" src="assets/images/whatsapp.png">+7(926)222-1997</div>
-          </li>
-          <li class="viber">
-            <div class="contact_text"><img class="images" src="assets/images/viber.png">+7(926)222-1997</div>
-          </li>
-          <li class="email">
-            <div class="contact_text"><img class="images" src="assets/images/mail.png">1@vse-polotna.ru</div>
-          </li>
-          <li>
-            <div>С 8:00 до 20:00 (Ежедневно)</div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="footer">
-  <div class="сopyright">© 2018 Все права защищены</div>
-</div>
+  <div><button type="button" class="btn btn-lg" (click)="ok()">Получить прайс</button></div>
+</form>
