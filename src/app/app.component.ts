@@ -1,18 +1,26 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
+
+import {DiscountService} from "./discount.service";
+import {log} from "util";
+import {Discount} from "./discount";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   email;
   emailError = false;
+  discounts: Discount[];
 
-  constructor (private http: HttpClient) {
+  constructor (private http: HttpClient,
+               private service: DiscountService) {}
 
+  ngOnInit() {
+    this.load();
   }
 
   emailForm = new FormGroup({
@@ -21,6 +29,15 @@ export class AppComponent {
       Validators.email
     ]),
   });
+
+  load(): void {
+    this.service.getDiscounts()
+      .subscribe(discounts => {
+        this.discounts = discounts;
+      }, error2 => {
+        log(error2);
+      });
+  }
 
   ok() {
     if (this.emailForm.valid) {

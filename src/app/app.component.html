@@ -1,7 +1,19 @@
-<form [formGroup]="emailForm">
-  <div><input class="email-input" type="email" placeholder="Введите адрес электронной почты" name="email" id="email" formControlName="email"></div>
-  <div *ngIf="emailError">
-    Введите правильный email !
+<div class="discount text-center">
+  <div class="discount_header">Акция!!!</div>
+  <div class="discount_text>"
+       *ngFor="let discount of discounts">
+    {{discount.text}}
   </div>
-  <div><button type="button" class="btn btn-lg" (click)="ok()">Получить прайс</button></div>
-</form>
+</div>
+<div class="price-form text-center">
+  <form [formGroup]="emailForm">
+    <div><input class="email-input" type="email" placeholder="Введите адрес электронной почты" name="email" id="email"
+                formControlName="email"></div>
+    <div *ngIf="emailError">
+      Введите правильный email !
+    </div>
+    <div>
+      <button type="button" class="btn btn-lg" (click)="ok()">Получить прайс</button>
+    </div>
+  </form>
+</div>
