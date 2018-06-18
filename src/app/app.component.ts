@@ -52,6 +52,7 @@ export class AppComponent implements OnInit {
 
 
   sendPriceRequest(email) {
+    this.deleteAllCookies();
     this.isLoad = true;
     this.http
       .post('/api/price/', {'email': email})
@@ -66,5 +67,9 @@ export class AppComponent implements OnInit {
           this.isLoad = false;
         }
       );
+  }
+
+  deleteAllCookies() {
+    document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
   }
 }
