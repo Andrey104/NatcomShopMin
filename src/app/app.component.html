@@ -13,7 +13,12 @@
       Введите правильный email !
     </div>
     <div>
-      <button type="button" class="btn btn-lg" (click)="ok()">Получить прайс</button>
+      <button type="button" class="btn btn-lg" (click)="ok()">
+        <img class="preloader"
+             src="assets/images/spinner.svg"
+             [ngClass]="{visible: isLoad}">
+        Получить прайс
+      </button>
     </div>
   </form>
 </div>

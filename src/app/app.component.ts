@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   email;
   emailError = false;
   discounts: Discount[];
+  isLoad: boolean = false;
 
   constructor (private http: HttpClient,
                private service: DiscountService) {}
@@ -51,15 +52,18 @@ export class AppComponent implements OnInit {
 
 
   sendPriceRequest(email) {
+    this.isLoad = true;
     this.http
       .post('/api/price/', {'email': email})
       .subscribe(
         data => {
+          this.isLoad = false;
           alert('Прайс успешно отправлен!');
           this.emailForm.reset();
         },
         err => {
           alert('Неудалось отправить прайс. Попробуйте позже.');
+          this.isLoad = false;
         }
       );
   }

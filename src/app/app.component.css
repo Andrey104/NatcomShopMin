@@ -1,8 +1,8 @@
+.preloader {
+  width: 15%;
+  display: none;
+}
 
-
-
-
-
-
-
-
+.visible {
+  display: inline;
+}
